@@ -16,11 +16,11 @@ const userSchema = new mongoose.Schema({
         required: [true, "Please provide a password"],
     },
     isVerified:{
-        type: boolean,
+        type: Boolean,
         default: false
     },
     isAdmin:{
-        type: boolean,
+        type: Boolean,
         default: false
     },
     forgotPasswordToken: String,
