@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 User Authentication System
 
-## Getting Started
+A full-stack **User Authentication System** built using **Next.js, React, MongoDB, JWT, Mailtrap, and Tailwind CSS**.
 
-First, run the development server:
+This project implements user registration, login, logout, protected routes, JWT-based authentication, email verification, and user profile functionality.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://user-authentication-nextjs-eight.vercel.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- 🔐 User Registration
+- 🔑 User Login
+- 🚪 User Logout
+- 🔒 JWT-based Authentication
+- 🍪 HTTP-only Authentication Cookies
+- 📧 Email Verification
+- 📬 Mailtrap Email Testing
+- 🛡️ Protected Routes using Next.js Middleware
+- 👤 User Profile
+- 🆔 Get Logged-in User Details
+- 🔗 Dynamic User Profile Route
+- 🗄️ MongoDB Database Integration
+- 🔑 Password Hashing
+- ⚠️ Error Handling
+- 🔔 Toast Notifications
+- 📱 Responsive UI
+- ☁️ Vercel Deployment
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
+- Next.js
+- React.js
+- TypeScript
+- Tailwind CSS
+- Axios
 
-## Deploy on Vercel
+### Backend
+- Next.js API Routes
+- Node.js
+- MongoDB
+- Mongoose
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Authentication & Security
+- JWT
+- HTTP-only Cookies
+- bcrypt
+- Next.js Middleware
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Email
+- Mailtrap
+
+### Deployment
+- Vercel
+
+---
+
+## 📂 Project Structure
+
+```text
+User-Authentication-nextjs/
+│
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── users/
+│   │   │       ├── login/
+│   │   │       │   └── route.ts
+│   │   │       ├── logout/
+│   │   │       │   └── route.ts
+│   │   │       ├── me/
+│   │   │       │   └── route.ts
+│   │   │       └── signup/
+│   │   │           └── route.ts
+│   │   │
+│   │   ├── login/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── signup/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── profile/
+│   │   │   ├── [id]/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   ├── dbConfig/
+│   │   └── dbConfig.ts
+│   │
+│   ├── helpers/
+│   │   └── getDataFromToken.ts
+│   │
+│   ├── models/
+│   │   └── userModels.js
+│   │
+│   └── middleware.ts
+│
+├── public/
+├── .env
+├── .gitignore
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── tsconfig.json
+└── README.md
+
